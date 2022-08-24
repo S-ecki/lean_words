@@ -14,33 +14,34 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Model _$ModelFromJson(Map<String, dynamic> json) {
-  return _Model.fromJson(json);
+SomeModel _$SomeModelFromJson(Map<String, dynamic> json) {
+  return _SomeModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Model {
+mixin _$SomeModel {
   String get name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ModelCopyWith<Model> get copyWith => throw _privateConstructorUsedError;
+  $SomeModelCopyWith<SomeModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ModelCopyWith<$Res> {
-  factory $ModelCopyWith(Model value, $Res Function(Model) then) =
-      _$ModelCopyWithImpl<$Res>;
+abstract class $SomeModelCopyWith<$Res> {
+  factory $SomeModelCopyWith(SomeModel value, $Res Function(SomeModel) then) =
+      _$SomeModelCopyWithImpl<$Res>;
   $Res call({String name});
 }
 
 /// @nodoc
-class _$ModelCopyWithImpl<$Res> implements $ModelCopyWith<$Res> {
-  _$ModelCopyWithImpl(this._value, this._then);
+class _$SomeModelCopyWithImpl<$Res> implements $SomeModelCopyWith<$Res> {
+  _$SomeModelCopyWithImpl(this._value, this._then);
 
-  final Model _value;
+  final SomeModel _value;
   // ignore: unused_field
-  final $Res Function(Model) _then;
+  final $Res Function(SomeModel) _then;
 
   @override
   $Res call({
@@ -56,27 +57,29 @@ class _$ModelCopyWithImpl<$Res> implements $ModelCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_ModelCopyWith<$Res> implements $ModelCopyWith<$Res> {
-  factory _$$_ModelCopyWith(_$_Model value, $Res Function(_$_Model) then) =
-      __$$_ModelCopyWithImpl<$Res>;
+abstract class _$$_SomeModelCopyWith<$Res> implements $SomeModelCopyWith<$Res> {
+  factory _$$_SomeModelCopyWith(
+          _$_SomeModel value, $Res Function(_$_SomeModel) then) =
+      __$$_SomeModelCopyWithImpl<$Res>;
   @override
   $Res call({String name});
 }
 
 /// @nodoc
-class __$$_ModelCopyWithImpl<$Res> extends _$ModelCopyWithImpl<$Res>
-    implements _$$_ModelCopyWith<$Res> {
-  __$$_ModelCopyWithImpl(_$_Model _value, $Res Function(_$_Model) _then)
-      : super(_value, (v) => _then(v as _$_Model));
+class __$$_SomeModelCopyWithImpl<$Res> extends _$SomeModelCopyWithImpl<$Res>
+    implements _$$_SomeModelCopyWith<$Res> {
+  __$$_SomeModelCopyWithImpl(
+      _$_SomeModel _value, $Res Function(_$_SomeModel) _then)
+      : super(_value, (v) => _then(v as _$_SomeModel));
 
   @override
-  _$_Model get _value => super._value as _$_Model;
+  _$_SomeModel get _value => super._value as _$_SomeModel;
 
   @override
   $Res call({
     Object? name = freezed,
   }) {
-    return _then(_$_Model(
+    return _then(_$_SomeModel(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -87,25 +90,25 @@ class __$$_ModelCopyWithImpl<$Res> extends _$ModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Model implements _Model {
-  const _$_Model({required this.name});
+class _$_SomeModel implements _SomeModel {
+  const _$_SomeModel({required this.name});
 
-  factory _$_Model.fromJson(Map<String, dynamic> json) =>
-      _$$_ModelFromJson(json);
+  factory _$_SomeModel.fromJson(Map<String, dynamic> json) =>
+      _$$_SomeModelFromJson(json);
 
   @override
   final String name;
 
   @override
   String toString() {
-    return 'Model(name: $name)';
+    return 'SomeModel(name: $name)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Model &&
+            other is _$_SomeModel &&
             const DeepCollectionEquality().equals(other.name, name));
   }
 
@@ -116,26 +119,27 @@ class _$_Model implements _Model {
 
   @JsonKey(ignore: true)
   @override
-  _$$_ModelCopyWith<_$_Model> get copyWith =>
-      __$$_ModelCopyWithImpl<_$_Model>(this, _$identity);
+  _$$_SomeModelCopyWith<_$_SomeModel> get copyWith =>
+      __$$_SomeModelCopyWithImpl<_$_SomeModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModelToJson(
+    return _$$_SomeModelToJson(
       this,
     );
   }
 }
 
-abstract class _Model implements Model {
-  const factory _Model({required final String name}) = _$_Model;
+abstract class _SomeModel implements SomeModel {
+  const factory _SomeModel({required final String name}) = _$_SomeModel;
 
-  factory _Model.fromJson(Map<String, dynamic> json) = _$_Model.fromJson;
+  factory _SomeModel.fromJson(Map<String, dynamic> json) =
+      _$_SomeModel.fromJson;
 
   @override
   String get name;
   @override
   @JsonKey(ignore: true)
-  _$$_ModelCopyWith<_$_Model> get copyWith =>
+  _$$_SomeModelCopyWith<_$_SomeModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

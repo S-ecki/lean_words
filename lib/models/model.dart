@@ -3,8 +3,9 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'model.freezed.dart';
 
 @freezed
-class Model {
-  const factory Model({required String name}) = _Model;
+class SomeModel with _$SomeModel {
+  const factory SomeModel({required String name}) = _SomeModel;
 
-  factory Model.fromJson(Map<String, Object?> json) => _$ModelFromJson(json);
+  factory SomeModel.fromJson(Map<String, Object?> json) =>
+      _$SomeModelFromJson(json);
 }

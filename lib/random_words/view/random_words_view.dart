@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:lean_words/config/router/router.gr.dart';
 import 'package:lean_words/random_words/business/business.dart';
 
 class RandomWordsView extends StatelessWidget {
@@ -10,10 +12,10 @@ class RandomWordsView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('WordPair Generator'),
-        actions: const [
+        actions: [
           IconButton(
-            icon: Icon(Icons.list),
-            onPressed: null,
+            icon: const Icon(Icons.list),
+            onPressed: () => context.router.push(const FavouriteWordsRoute()),
           )
         ],
       ),
@@ -28,7 +30,7 @@ class RandomWordsView extends StatelessWidget {
                     final isFav = state.isFavourite(word);
 
                     return ListTile(
-                      title: Text(word),
+                      title: Text(word, style: const TextStyle(fontSize: 18)),
                       trailing: Icon(
                         isFav ? Icons.favorite : Icons.favorite_border,
                         color: isFav ? Colors.red : null,
@@ -45,38 +47,3 @@ class RandomWordsView extends StatelessWidget {
     );
   }
 }
-
-
-// void _pushSaved() {
-//   // Navigator manages child widgets with a stack
-//   Navigator.of(context).push<Scaffold>(
-//     // this gets pushed on navigator stack - content defined by builder
-//     MaterialPageRoute(
-//       builder: (BuildContext context) {
-//         // define List of tiles
-//         // take every pair from _saved
-//         // and create ListTile similar to HomeScreen
-//         final tiles = _saveWordPairs.map((WordPair pair) {
-//           return ListTile(
-//             title: Text(pair.asCamelCase, style: const TextStyle(fontSize: 16)),
-//           );
-//         });
-
-//         // put divider between every tile
-//         // convert to list at the end
-//         final dividedList = ListTile.divideTiles(
-//           context: context,
-//           // tiles from List above
-//           tiles: tiles,
-//         ).toList();
-
-//         // defines how screen looks
-//         return Scaffold(
-//           appBar: AppBar(title: const Text('saved Pairs')),
-//           // create ListView from List of Tiles
-//           body: ListView(children: dividedList),
-//         );
-//       }, // builder
-//     ),
-//   ); // Navigator
-// }
