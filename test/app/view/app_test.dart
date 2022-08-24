@@ -7,13 +7,13 @@
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:lean_words/app/app.dart';
-import 'package:lean_words/counter/counter.dart';
+import 'package:lean_words/random_words/view/random_words_view.dart';
 
 void main() {
   group('App', () {
     testWidgets('renders CounterPage', (tester) async {
-      await tester.pumpWidget(const App());
-      expect(find.byType(CounterPage), findsOneWidget);
+      await tester.pumpWidget(App());
+      expect(find.byType(RandomWordsView), findsOneWidget);
     });
   });
 }
