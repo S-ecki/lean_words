@@ -9,5 +9,5 @@ import 'package:lean_words/app/app.dart';
 import 'package:lean_words/bootstrap.dart';
 
 void main() {
-  bootstrap(App.new);
+  bootstrap(LeanApp.new);
 }

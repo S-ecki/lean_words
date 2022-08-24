@@ -12,7 +12,7 @@ import 'package:lean_words/random_words/view/random_words_view.dart';
 void main() {
   group('App', () {
     testWidgets('renders CounterPage', (tester) async {
-      await tester.pumpWidget(App());
+      await tester.pumpWidget(LeanApp());
       expect(find.byType(RandomWordsView), findsOneWidget);
     });
   });

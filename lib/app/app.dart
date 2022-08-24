@@ -4,9 +4,10 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:lean_words/config/router/router.gr.dart';
 import 'package:lean_words/l10n/l10n.dart';
 import 'package:lean_words/random_words/business/business.dart';
+import 'package:lean_words/theme/theme.dart';
 
-class App extends StatelessWidget {
-  App({super.key});
+class LeanApp extends StatelessWidget {
+  LeanApp({super.key});
 
   final _appRouter = AppRouter();
 
@@ -16,9 +17,7 @@ class App extends StatelessWidget {
       create: (context) => RandomWordsCubit()..initialize(),
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primarySwatch: Colors.purple,
-        ),
+        theme: appTheme,
         localizationsDelegates: const [
           AppLocalizations.delegate,
           GlobalMaterialLocalizations.delegate,
