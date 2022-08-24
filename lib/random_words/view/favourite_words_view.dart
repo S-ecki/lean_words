@@ -11,7 +11,23 @@ class FavouriteWordsView extends StatelessWidget {
       appBar: AppBar(),
       body: BlocBuilder<RandomWordsCubit, RandomWordsState>(
         builder: (context, state) {
-          return Text(state.favourites.join(', '));
+          return ListView.separated(
+            itemCount: state.favourites.length,
+            itemBuilder: (_, index) {
+              final word = state.favourites[index];
+
+              return ListTile(
+                title: Text(word, style: const TextStyle(fontSize: 18)),
+                trailing: const Icon(
+                  Icons.favorite,
+                  color: Colors.red,
+                ),
+                onTap: () =>
+                    context.read<RandomWordsCubit>().toggleFavourite(word),
+              );
+            },
+            separatorBuilder: (_, index) => const Divider(),
+          );
         },
       ),
     );
