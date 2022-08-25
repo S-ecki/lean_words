@@ -3,5 +3,13 @@
     "appBarTitle": "Wordpair Generator",
     "@appBarTitle": {
         "description": "Text shown in the AppBar of the Counter Page"
+    },
+    "example": "Lean {name} rocks!",
+    "@example": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
     }
+  }
 }

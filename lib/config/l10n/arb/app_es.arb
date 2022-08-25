@@ -3,5 +3,6 @@
     "appBarTitle": "Sisi",
     "@appBarTitle": {
         "description": "Texto mostrado en la AppBar de la página del contador"
-    }
+    },
+    "example": "Lean {state} rockear!"
 }

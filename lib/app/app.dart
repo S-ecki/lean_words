@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:lean_words/config/l10n/l10n.dart';
 import 'package:lean_words/config/router/router.gr.dart';
-import 'package:lean_words/l10n/l10n.dart';
 import 'package:lean_words/random_words/business/business.dart';
 import 'package:lean_words/theme/theme.dart';
 
