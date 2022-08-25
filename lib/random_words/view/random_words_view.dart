@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:lean_words/config/l10n/l10n.dart';
 import 'package:lean_words/config/router/router.gr.dart';
-import 'package:lean_words/l10n/l10n.dart';
 import 'package:lean_words/random_words/business/business.dart';
 
 class RandomWordsView extends StatelessWidget {

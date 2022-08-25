@@ -1,6 +1,7 @@
 import 'package:english_words/english_words.dart';
 
 class RandomWordsGenerator {
+  /// Returns `count` number of random Wordpairs after 2 seconds.
   Future<List<WordPair>> randomWordPairs(int count) async {
     await Future<void>.delayed(const Duration(seconds: 2));
     return generateWordPairs().take(count).toList();
